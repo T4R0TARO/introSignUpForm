@@ -134,6 +134,24 @@ Main Flex Container
   input:focus {
     border: 2px solid lightblue;
   }
+
+  /* Input Error Borders */
+
+  .userForm .fname {
+   
+  }
+
+  .userForm .lname {
+
+  }
+
+  .userForm .emailInput {
+
+  }
+
+  .userForm .pwdInput {
+
+  }
   
 /*============
 ERROR MSGs
@@ -153,22 +171,22 @@ ERROR MSGs
   
 /* First Name  */
   .fnameIcon, .fnameError {
-    opacity: 1;
+    opacity: 0;
     }
     
 /* Last Name */
     .lnameIcon, .lnameError {
-    opacity: 1;
+    opacity: 0;
     }
 
 /*Email*/
     .emailIcon, .emailError {
-    opacity: 1;
+    opacity: 0;
     }
     
 /*Password*/
     .pwdIcon, .pwdError {
-    opacity: 1;
+    opacity: 0;
     }
 
 
@@ -181,12 +199,12 @@ ERROR MSGs
     background-color: hsl(154, 56%, 46%);
     color: white !important;
     font-weight: 600;
+    text-align: center;
     border-bottom: solid 5px hsl(154, 57%, 38%) !important;
   }
   
   .claimButton:hover {
     cursor: pointer;
-    /* filter: brightness(var(--value, 5)); --value: 2; */
     background-color: var(--claim-green);
   }
   
