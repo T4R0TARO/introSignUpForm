@@ -1,0 +1,253 @@
+/*====================
+Custom Variables
+======================*/
+:root {
+    --error-red: hsl(0, 100%, 74%) ;
+    --claim-green: hsl(154, 59%, 51%);
+    --tryButton-blue: hsl(248, 32%, 49%);
+    --shadowColor--gray: hsl(249, 10%, 26%);
+    --textColor--gray: hsl(246, 25%, 77%);
+}
+
+/*====================
+Base Styles
+======================*/
+html {
+    box-sizing: border-box;
+    font-size: 100%;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1, h2, h3, h4 {
+    margin-top: 0;
+  }
+  
+  body {
+    margin: 70px 20px;
+    font-size: 16px;
+    color: whitesmoke;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    background-image: url(/images/bg-intro-mobile.png);
+    background-repeat: none;
+    background-size: cover;
+    background-color: var(--error-red);
+  }
+  
+/*===================
+Main Flex Container
+=====================*/
+
+  .flexbox-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+/*Targets all flex items*/
+  .flexbox-item {
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+/* Main Text */
+  .mainText {
+    display: flex; 
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
+  
+  .mainText h1 {
+    margin-bottom: 10px;
+    font-weight: 700;
+  }
+  
+  .mainText p {
+    max-width: 320px;
+    font-weight: 500;
+  }
+  
+  .formWrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  
+/*Try Free Button */
+  .tryButton {
+    color: white;
+    background: var(--tryButton-blue);
+    height: 75px;
+    width: 100%;
+    border-radius: 12px;
+    border: none;
+    padding: 0 75px;
+    margin-bottom: 15px;
+    box-shadow: 0px 10px 0px rgba(0, 0, 0, 0.1);  
+  }
+  
+  .tryButton p {
+    max-width: 170px;
+    font-weight: 500;
+  }
+  
+  .tryButton:hover {
+    cursor: pointer;
+    box-shadow: none;
+  }
+  
+/*Sign Up Form Card/Wrapper  */
+  .userFormWrapper {
+    /* border: 2px solid orange; */
+    padding: 20px;
+    border-radius: 12px;
+    background-color: white;
+    box-shadow: 0px 10px 0px rgba(0, 0, 0, 0.1);  
+  }
+  
+  .userForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+/*Form Inputs Sizing  */
+  .userForm input {
+    height: 40px;
+    border-radius: 8px;
+    padding: 6px 20px;
+    border: 1px solid lightgray;
+    width: 235px;
+    font-weight: 600;
+    outline: none;
+    color: var(--textColor--gray);
+  }
+  
+  input:focus {
+    border: 2px solid lightblue;
+  }
+  
+/*============
+ERROR MSGs
+==============*/
+  .errorMsg {
+    color: var(--error-red);
+    font-size: 12px;
+    margin: 0 0 18px 90px;
+    opacity: 0; /*🧠🔺*/
+  }
+
+/* All icons */
+  .userForm img {
+      position: absolute;
+      transform: translateX(-37px)translateY(12px);
+  }
+  
+/* First Name  */
+  .fnameIcon, .fnameError {
+    opacity: 1;
+    }
+    
+/* Last Name */
+    .lnameIcon, .lnameError {
+    opacity: 1;
+    }
+
+/*Email*/
+    .emailIcon, .emailError {
+    opacity: 1;
+    }
+    
+/*Password*/
+    .pwdIcon, .pwdError {
+    opacity: 1;
+    }
+
+
+  /*Claim Free Button  */
+  .claimButton  {
+  /* content-box makes button size match input width above   */
+    box-sizing: content-box; 
+    height: 45px;
+    margin-bottom: 12px;
+    background-color: hsl(154, 56%, 46%);
+    color: white !important;
+    font-weight: 600;
+    border-bottom: solid 5px hsl(154, 57%, 38%) !important;
+  }
+  
+  .claimButton:hover {
+    cursor: pointer;
+    /* filter: brightness(var(--value, 5)); --value: 2; */
+    background-color: var(--claim-green);
+  }
+  
+  /*Terms and Services  */
+  .termsAndServices {
+    font-size: 10px;
+    max-width: 211px;
+    color: var(--textColor--gray)
+  }
+
+  a {
+    color: var(--error-red);
+    text-decoration: none; 
+    font-weight: 600;
+  }
+  
+  /*=========================
+   Applies desktop styles
+   ========================== */
+  @media screen and (min-width: 600px){
+    body {
+        background-image: url(/images/bg-intro-desktop.png);
+      }
+    .flexbox-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+    .tryButton {
+      box-sizing: content-box;
+      width: 485px;
+      height: 55px;
+    }
+    .tryButton p {
+     max-width: 100%;
+    }
+    .mainText {
+      text-align: left;
+    }
+    .mainText h1 {
+      font-size: 50px;
+      margin-left: -180px;
+      line-height: 1.1;
+    }
+    .termsAndServices {
+      max-width: 100%;
+    }
+    .userFormWrapper {
+      /* border: 2px solid orange; */
+      padding: 45px;
+      max-width: 600px;
+    }
+    .userForm input {
+      width: 500px;
+    }
+    .subText p {
+      min-width: 550px;
+      margin-left: -45px;
+    }
+    .errorMsg {
+      margin-left: 370px;
+    }
+  }
