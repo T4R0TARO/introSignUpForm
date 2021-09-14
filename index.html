@@ -38,26 +38,31 @@
   <!--Form-->
         <div class="userFormWrapper">
             <form class="userForm">
+              <!-- first name  -->
               <label for="firstName"> 
-                <input  class="fname" name="firstname" type="text" placeholder="First Name">
+                <input id="firstName"  class="fname" name="firstname" type="text" placeholder="First Name">
                 <img class="fnameIcon" src="./images/icon-error.svg" alt="errorIcon">
-                 <p class="fnameError errorMsg">First Name cannot be empty</p>
               </label> 
+                <p class="fnameError errorMsg">First Name cannot be empty</p>
+                <!-- last name -->
               <label for="lastName"> 
-                <input class="lname" name="lasname" type="text" placeholder="Last Name">
+                <input id="lastName" class="lname" name="lasname" type="text" placeholder="Last Name">
                   <img class="lnameIcon" src="./images/icon-error.svg" alt="errorIcon"> 
-                  <p class="lnameError errorMsg">Last Name cannot be empty</p>
               </label>
+                <p class="lnameError errorMsg">Last Name cannot be empty</p>
+              <!-- email -->
               <label for="email"> 
-                <input class="emailInput" type="email" placeholder="Email Address">
+                <input id="email" class="emailInput" type="email" placeholder="Email Address">
                  <img class="emailIcon" src="./images/icon-error.svg" alt="errorIcon">
-                 <p class="emailError errorMsg">Looks like this is not an email</p>
               </label>
+                <p class="emailError errorMsg">Looks like this is not an email</p>
+              <!-- password -->
               <label for="password"> 
-                <input class="pwdInput"  type="password" placeholder="Password">
+                <input id="password" class="pwdInput"  type="password" placeholder="Password">
                 <img class="pwdIcon" src="./images/icon-error.svg" alt="errorIcon">
-                  <p class="pwdError errorMsg">Password cannot be empty</p>
               </label>
+                <p class="pwdError errorMsg">Password cannot be empty</p>
+              <!-- claim button -->
               <input class="claimButton" type="submit" value="CLAIM YOUR FREE TRIAL">
                 <p class=termsAndServices>
                   By clicking the button, you are agreeing to our <a href="#">Terms and Services</a>
